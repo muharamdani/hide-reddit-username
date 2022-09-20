@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Hide reddit username",
+  "version": "1.0",
+  "description": "Extension for hide username on reddit site",
+  "icons": { "16": "icon16x.png", "48": "icon48x.png", "128": "icon128x.png"},
+  "action": {
+    "default_popup": "content.html",
+    "default_icon": { "16": "icon16x.png", "48": "icon48x.png", "128": "icon128x.png"}
+  },
+  "content_scripts": [{
+    "js": ["init.js", "content.js"],
+    "matches": ["https://www.reddit.com/*"]
+  }],
+  "permissions": ["activeTab", "scripting", "tabs", "storage"]
+}
